@@ -20,19 +20,22 @@ require("lazy").setup({
       'nvim-lualine/lualine.nvim',
       dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
-	{ 'nvim-tree/nvim-tree.lua', dependencies = { 'nvim-tree/nvim-web-devicons' } },
-	{
-		'windwp/nvim-autopairs',
-		event = "InsertEnter",
-		config = true
-	},
-	{
-		'nvim-treesitter/nvim-treesitter',
-		lazy = false,
-		build = ':TSUpdate'
-	},
+	-- { 'nvim-tree/nvim-tree.lua', dependencies = { 'nvim-tree/nvim-web-devicons' } },
+	-- { 'nvim-tree/nvim-tree.lua' },
+	-- {
+	-- 	'windwp/nvim-autopairs',
+	-- 	event = "InsertEnter",
+	-- 	config = true
+	-- },
+	-- {
+	-- 	'nvim-treesitter/nvim-treesitter',
+	-- 	lazy = false,
+	-- 	build = ':TSUpdate'
+	-- },
 	{ 'p00f/nvim-ts-rainbow' },
 	{ dir = '~/Documents/projects/dotfiles/vimfiles/.vim/plugged/vim-surround', name = 'vim-surround' },
+	{ dir = '~/Documents/projects/dotfiles/vimfiles/.vim/plugged/nerdtree', name = 'nerdtree' },
+	{ dir = '~/Documents/projects/dotfiles/vimfiles/.vim/plugged/auto-pairs', name = 'auto-pairs' },
 	{ dir = "~/Documents/projects/dotfiles/vimfiles/.vim/plugged/vim-fugitive", name = 'vim-fugitive' },
     { import = "plugins" },
   },
