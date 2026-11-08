@@ -189,7 +189,7 @@ nnoremap <space>lc :call setloclist(0, [], 'f')<cr>:lclose<cr>
 nnoremap yot :terminal<cr>
 tnoremap yot <c-w>:hide<cr>
 nnoremap yop :set paste!<cr>
-nnoremap yoq :cwindow<cr>
+nnoremap yoq :copen<cr>
 nnoremap yol :lopen<cr>
 nnoremap yon <Plug>NetrwShrink
 nnoremap yog :Git<cr>
