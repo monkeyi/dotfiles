@@ -1,7 +1,6 @@
 unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
 packadd! matchit
-
 " Basic {{{1
 let mapleader = ","
 inoremap jk <esc>
@@ -11,7 +10,7 @@ nnoremap <leader>q :quit<cr>
 tnoremap <leader>q <c-w><c-c>
 nnoremap <silent> <c-l> :nohls<cr><c-l>
 nnoremap <leader> <c-l> :mes clear<cr>:nohls<cr><c-l>
-nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
+nnoremap <expr> gb '`<' . strpart(getregtype(), 0, 1) . '`>'
 
 " options {{{2
 set number
@@ -149,7 +148,7 @@ command! BufOnly execute '%bdelete|edit#|bdelete#'
 " dir {{{3
 nnoremap <space>ds :pwd<cr>
 if has("win32unix")
-    nnoremap <silent> <leader>tf :!start<space><c-r>=expand("%:p:h")<cr>/<cr>
+	nnoremap <silent> <leader>tf :!start<space><c-r>=expand("%:p:h")<cr>/<cr>
 endif
 
 " cmdline {{{3
@@ -167,13 +166,13 @@ nnoremap <space>lb _
 nnoremap <space>le g_
 nnoremap <space>ls :call <SID>stripTrailingWhitespace()<cr>
 function! s:stripTrailingWhitespace()
-    if !&binary && &filetype != 'diff'
-        normal mz
-        normal Hmy
-        %s/\s\+$//e
-        normal 'yz<cr>
-        normal 'z
-    endif
+	if !&binary && &filetype != 'diff'
+		normal mz
+		normal Hmy
+		%s/\s\+$//e
+		normal 'yz<cr>
+		normal 'z
+	endif
 endfunction
 
 " quickfix {{{3
@@ -202,10 +201,10 @@ vnoremap g* *N
 xnoremap * :call <SID>VSetSearch()<cr>/<c-r>=@/<cr><cr>
 xnoremap # :call <SID>VSetSearch()<cr>?<c-r>=@/<cr><cr>
 function! s:VSetSearch()
-    let temp = @s
-    normal! gv"sy
-    let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
-    let @s = temp
+	let temp = @s
+	normal! gv"sy
+	let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
+	let @s = temp
 endfunction
 " nnoremap <leader>m :make<cr>
 " nnoremap <leader>g :grep<space>

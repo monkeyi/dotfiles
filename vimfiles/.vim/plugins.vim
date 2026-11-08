@@ -1,5 +1,5 @@
 " plugins {{{1
-call plug#begin('~/Documents/dotfiles/vimfiles/.vim/plugged')
+call plug#begin('~/Documents/projects/dotfiles/vimfiles/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'yianwillis/vimcdoc'
 Plug 'vim-airline/vim-airline'
@@ -30,6 +30,7 @@ Plug 'junegunn/seoul256.vim'
 "Plug 'sheerun/vim-polyglot'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 " vim-airline {{{2
